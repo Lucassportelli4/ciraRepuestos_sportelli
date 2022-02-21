@@ -128,7 +128,15 @@ body{
     } 
     #sobre-nosotros{
     grid-area: sobre-nosotros;
+    background-color: rgba(128, 128, 128, 0.575);
     margin: 100px;
+    height: 50%;
+    width: 100%;
+    transition: heigth 5s;
+    }
+    #sobre-nosotros:hover{
+        height: 80%;
+        background-color: rgba(128, 128, 128, 0.945);
     }
     h2{
         text-align: center;
