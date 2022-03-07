@@ -206,6 +206,17 @@ body{
         flex-direction: row;
         }
     /* FIN FOOTER */
+    /* INICIO PRODUCTOS */
+    #grilla-productos{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "principal"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: 160px auto auto;
+    }
+    /* INICIO PRODUCTOS */
 }
 @media screen and (min-width: 1200px) {
     #grilla{
