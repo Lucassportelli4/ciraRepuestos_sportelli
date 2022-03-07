@@ -49,7 +49,6 @@ body{
     #header__logo img{
     max-width: 100%;
     max-height: 100%;
-    
     }
     #header__buscador{
     grid-area:  header__buscador;
@@ -129,8 +128,8 @@ body{
         overflow-x: auto;
         overflow-y: hidden;
     }
-    #ofertas article {
-        border: 2px solid #2c3e50;
+    .Productos {
+        border: none;
         margin: 15px;
         margin-left: 15px;
         min-width: 250px;
@@ -139,7 +138,7 @@ body{
         justify-content: space-between;
         background-color: bisque;
     }
-    #ofertas article img{
+    .Productos img{
        width: 100%;
        height: 250px;
     } 
@@ -210,54 +209,71 @@ body{
 }
 @media screen and (min-width: 1200px) {
     #grilla{
-    display: grid;
-    grid-template-areas:
-    "header"
-    "carrusel"
-    "ofertas"
-    "sobre-nosotros"
-    "marcas"
-    "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: 160px repeat(6,auto) ;
-    } 
-    /* INICIO HEADER */
-    #header{
-    grid-area: header;
-    background-color:#2c3e50;
-    border: 1px SOLID black;
-    
-    display: grid;
-    grid-template-areas: "header__logo header__buscador header__nav-sup"
-    "header__nav-inf header__nav-inf header__nav-inf";
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 70% 30%;
+        display: grid;
+        grid-template-areas:
+        "sobre-header"
+        "header"
+        "nav-header"
+        "carrusel"
+        "ofertas"
+        "sobre-nosotros"
+        "marcas"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 30px 100px 50px repeat(6,auto) ;
+    }
+    /* INICIO HEADER */ 
+    #sobre-header{
+        background-color: rgb(165, 44, 44);
+        grid-area: sobre-header;
+    }
+    #sobre-header ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    div#header{
+        background-color:#2c3e50;
+            border: 1px SOLID black;
+        display: grid;
+        grid-template-areas: 
+        "header__logo header__buscador header__nav-sup";
+        grid-template-columns: 20% auto 20%;
+        grid-template-rows: 100%;
     }
     #header__logo{
-    grid-area:  header__logo;
+        grid-area:  header__logo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
     }
     #header__logo img{
-    max-width: 100%;
-    max-height: 100%;
-    padding-left: 15%;
-    }   
+        max-width: 100%;
+        max-height: 100%;
+    }
     #header__buscador{
-    grid-area:  header__buscador;
+        grid-area:  header__buscador;
     }
     #header__buscador input{
-    margin-top: 30px;
-    margin-left: 70px;
-    width: 80%;
-    height: 30%;
-    border-radius: 20px;
+        margin-top: 35px;
+        margin-left: 30px;
+        width: 80%;
+        height: 30%;
+        border-radius: 20px;
+    }
+    hr{
+        margin: 0;
+        width: 70%;
+        margin-left: 15%;
     }
     #header__nav-sup{
-    grid-area:  header__nav-sup;
+        grid-area:  header__nav-sup;
     }
     .nav{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
     }
     #header__nav-inf{
     grid-area:  header__nav-inf;
@@ -296,26 +312,70 @@ body{
     }
     #ofertas{
         grid-area: ofertas;
+        background-color: rgba(128, 128, 128, 0.349);
+        margin-left: 245px;
+        margin-right: 245px;
+        height: 450px;
+        border: 1px solid black;
+        display: flex;
+        overflow-x:auto;
+        overflow-y: hidden;
+        padding: 15px;
+    }
+    .Producto {
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 5%;
+        transition: border .5s;
+        padding: 15px;
+        padding-left: 15px;
+        min-width: 250px;
+        height: 400px;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .Producto:hover{
+        border: 1px solid grey;
+        border-radius: 5%;
+    }
+    .Producto img{
+        margin: 15;
+        width: 100%;
+        height: 250px;
+    } 
+    #sobre-nosotros{
+        grid-area: sobre-nosotros;
+        background-color: rgba(128, 128, 128, 0.575);
+        margin: 30px;
     }
     #marcas{
-       grid-area: marcas;
+        grid-area: marcas;
+        background-color: rgba(128, 128, 128, 0.199);
+        margin: 30px;
+        height: 170px;
+        border: none;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;   
     }
-    #ofertas, #marcas{
-        background-color: rgba(128, 128, 128, 0.349);
-        margin: 50px;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        grid-template-rows:  auto;
-        grid-column-gap: 15px;
-        grid-row-gap: 15px;
-        justify-items: stretch;
-        justify-content: stretch;
+    #marcas article {
+        border: none;
+        margin: 15px;
+        margin-left: 180px;
+        min-width: 150px;
+        height: 150px;
+        text-align: center;
+        justify-content: space-between;
     }
-    article img{
-       width: 100%;} 
-    #sobre-nosotros{
-    grid-area: sobre-nosotros;
-    margin: 100px;
+    #marcas article img{
+        max-width: 100%;
+        max-width: 100%;
+        opacity: .5;
+        transition: max-width 2s, opacity 2s;
+    }
+    #marcas article img:hover{
+        max-width: 150%;
+        opacity: 1;
+    
     }
     h2{
         text-align: center;
