@@ -413,7 +413,8 @@ body{
     .navLetras{
         color: white;
         text-decoration: none;
-        font-family: sans-serif;
+        font-family: "Montserrat", Sans-serif;
+        font-weight: 1000;
     }
     #ofertas{
         grid-area: ofertas;
@@ -433,8 +434,8 @@ body{
         transition: border .5s;
         padding: 15px;
         padding-left: 15px;
-        max-width: 250px;
-        height: 400px;
+        width: 250px;
+        min-height: 400px;
         text-align: center;
         justify-content: space-between;
     }
@@ -451,6 +452,7 @@ body{
         grid-area: sobre-nosotros;
         background-color: rgba(128, 128, 128, 0.575);
         margin: 30px;
+        text-align: center;
     }
     #marcas{
         grid-area: marcas;
@@ -569,6 +571,10 @@ body{
     }
     .aside ul li{
         color: black;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 15px;
+        font-weight: 1000;
+        text-decoration: none;
     }
     .formulario{
         margin-top: 30px;
@@ -674,4 +680,40 @@ body{
         opacity: .8;
     }
     /* FIN NOSOTROS */
+}
+
+/* LETRA */
+h3 ,h4, a, li{
+    font-family: "Montserrat", Sans-serif;
+}
+h1, h2{
+    font-family: "Nunito", sans-serif;
+}
+h1{
+    font-size: 35px;
+    font-weight: 700;
+}
+h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+h3{
+    font-size: 20px;
+    font-weight: 1000;
+}
+h4, a, li{
+    font-size: 15px;
+    font-weight: 1000;
+}
+.Producto h4{
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+    color: #2c3e50;
+}
+.submit{
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
 }
