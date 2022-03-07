@@ -139,7 +139,7 @@ body{
     /* FIN FOOTER */
 }
 @media screen and (min-width: 1200px) {
-    #grilla{
+    #grilla-productos{
     display: grid;
     grid-template-areas:
     "header header"
