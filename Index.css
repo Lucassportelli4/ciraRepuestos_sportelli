@@ -12,12 +12,12 @@ body{
     "sobre-header"
     "header"
     "carrusel"
-    "ofertas"
     "sobre-nosotros"
+    "ofertas"
     "marcas"
     "footer";
     grid-template-columns: 100%;
-    grid-template-rows: 30px 150px 500px repeat(4,auto) ;
+    grid-template-rows: 30px 150px 400px repeat(4,auto) ;
     }
    /* INICIO HEADER */ 
     #sobre-header{
@@ -41,6 +41,13 @@ body{
     }
     #menu-hambur{
         grid-area: menu-hambur;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    #menu-hambur img{
+        padding-left: 20px;
+        max-height: 30%;
     }
     #header__logo{
     grid-area:  header__logo;
@@ -134,7 +141,7 @@ body{
        grid-area: marcas;
     }
     #ofertas{
-        background-color: rgba(128, 128, 128, 0.349);
+        background-color: rgba(128, 128, 128, 0.199);
         margin: 30px;
         height: 450px;
         border: 1px solid black;
@@ -142,6 +149,18 @@ body{
         overflow-x: auto;
         overflow-y: hidden;
         padding: 15px;
+    }
+    #ofertas1 span{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    #ofertas1 span h2{
+        margin: 15px;
+    }
+    #ofertas1 span h3{
+        margin: 0;
     }
     .Producto {
         border: 1px solid rgba(128, 128, 128, 0.822);
@@ -157,35 +176,29 @@ body{
        width: 250px;
        height: 250px;
     } 
-    #sobre-nosotros{
-    grid-area: sobre-nosotros;
-    background-color: rgba(128, 128, 128, 0.575);
-    margin: 30px;
-    }
-    #marcas{
+    #sobre-nosotros, #marcas{
         background-color: rgba(128, 128, 128, 0.199);
-        margin: 30px;
-        height: 130px;
-        border: 1px solid black;
+        margin: 30px 0 0 0;
+        height: 160px;
         display: flex;
         overflow-x: auto;
         overflow-y: hidden;   
     }
-    #marcas article {
+    #sobre-nosotros article, #marcas article {
         border:none;
         margin: 15px;
         margin-left: 15px;
-        min-width: 150px;
-        height: 150px;
+        min-width: 100px;
+        height: 100px;
         text-align: center;
         justify-content: space-between;
     }
-    #marcas article img{
+    #sobre-nosotros article img, #marcas article img{
         width: 80%;
         opacity: .5;
         transition: width 1s, opacity 1s;
     }
-    #marcas article img:hover{
+    #sobre-nosotros article img:hover, #marcas article img:hover{
         width: 100%;
         opacity: 1;
     }
@@ -385,8 +398,8 @@ body{
         "header"
         "nav-header"
         "carrusel"
-        "ofertas"
         "sobre-nosotros"
+        "ofertas"
         "marcas"
         "footer";
         grid-template-columns: 100%;
@@ -489,7 +502,7 @@ body{
     }
     #ofertas{
         grid-area: ofertas;
-        background-color: rgba(128, 128, 128, 0.349);
+        background-color: rgba(128, 128, 128, 0.199);
         margin-left: 245px;
         margin-right: 245px;
         height: 450px;
@@ -498,6 +511,18 @@ body{
         overflow-x:auto;
         overflow-y: hidden;
         padding: 15px;
+    }
+    #ofertas1 span{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    #ofertas1 span h2{
+        margin: 15px;
+    }
+    #ofertas1 span h3{
+        margin: 0;
     }
     .Producto {
         border: 1px solid rgba(128, 128, 128, 0);
@@ -521,21 +546,28 @@ body{
     }
     #sobre-nosotros{
         grid-area: sobre-nosotros;
-        background-color: rgba(128, 128, 128, 0.575);
-        margin: 30px;
-        text-align: center;
     }
     #marcas{
-        grid-area: marcas;
+        grid-area: marcas;   
+    }
+    #sobre-nosotros, #marcas{
         background-color: rgba(128, 128, 128, 0.199);
-        margin: 30px;
-        height: 170px;
-        border: none;
+        margin: 30px 0 0 0;
+        height: 160px;
         display: flex;
         overflow-x: auto;
         overflow-y: hidden;   
     }
-    #marcas article {
+    #sobre-nosotros article img, #marcas article img{
+        width: 80%;
+        opacity: .5;
+        transition: width 1s, opacity 1s;
+    }
+    #sobre-nosotros article img:hover, #marcas article img:hover{
+        width: 100%;
+        opacity: 1;
+    }
+    #sobre-nosotros article, #marcas article {
         border: none;
         margin: 15px;
         margin-left: 180px;
@@ -543,16 +575,6 @@ body{
         height: 150px;
         text-align: center;
         justify-content: space-between;
-    }
-    #marcas article img{
-        width: 80%;
-        opacity: .5;
-        transition: width 1s, opacity 1s;
-    }
-    #marcas article img:hover{
-        width: 100%;
-        opacity: 1;
-    
     }
     h2{
         text-align: center;
